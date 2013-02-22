@@ -1,0 +1,357 @@
+@import 'nib'
+@import './ellipsis'
+
+dk-orange = #f06c00
+lt-orange = #ffe8d6
+product-size = 268px
+dk-blue = #367ca0
+side-gutter = 12px
+max-width = 1280px
+main-width = 920px
+
+font-family = "Lucida Grande",Helvetica,Arial,Verdana,sans-serif
+
+visually-hidden()
+    position absolute
+    left -3000px
+
+a
+    color black
+    cursor pointer
+    text-decoration none
+    &:hover
+        color black
+        text-decoration underline
+
+aside
+    background-color #eee
+    border-radius 5px
+    font-size 0.9em
+    margin-bottom 2em
+    padding 0.5em 1em 1em
+    figure
+        figcaption, dl, dt
+            display inline-block
+        img
+            border solid 1px black
+            height 20%
+            width 20%
+
+body
+    background-color white
+    font-family font-family
+    position: relative
+
+button
+    background-color dk-orange
+    border none
+    border-radius 5px
+    color white
+    font-weight bold
+    padding 0.5em 2em
+    text-align center
+    &:hover
+        background darken(dk-orange, 25%)
+
+embed,
+img,
+object,
+video
+    max-width 100%
+    width auto
+    height auto
+    vertical-align middle
+    border 0
+
+figcaption .currency
+    font-size 1.4em
+    font-style italic
+    font-weight normal
+
+h1
+    font-size 1.8em
+h2
+    font-size 1.6em
+h3
+    font-size 1.2em
+h4
+    font-size 1.1em
+h5
+    font-size 1em
+
+input, 
+select, 
+textarea
+    display block
+
+
+
+label
+    display block
+
+ul.chevron
+    list-style-type none
+    margin 0
+    padding 0
+    a
+        background url('../img/chevron.png') no-repeat 0 3px
+        display block
+        padding-left 20px
+        &:hover
+            background-position 2px 3px
+    li
+        margin-top 1em
+
+.container
+    margin 0 auto
+    max-width max-width
+    position relative
+
+.currency
+    font-weight bold
+
+
+.hero
+    line-height 1
+    position relative
+    header
+        letter-spacing 0.1em
+    figure
+        background linear-gradient(top left bottom, lighten(lt-orange,75%) 28%, lt-orange 70%, darken(lt-orange, 5%))
+        border-radius 0 5px 0 0
+        min-height main-width/product-size
+        position relative
+        figcaption
+            display inline-block
+            height 100%
+            overflow hidden
+            position absolute
+            text-align justify
+            top 0
+            width 68%
+            /*ie craps here*/
+        img
+            border solid 1px dk-orange
+            width 30%
+
+        p, form
+            max-height 4em
+            overflow hidden
+            padding 0 5px
+            text-overflow ellipsis
+            white-space pre-line
+
+.no-cssgradients, .ie
+    .hero figure
+        background-color lt-orange
+.search
+    line-height 1
+    margin 0
+    padding 0
+    label
+        visually-hidden()
+    button
+        background url('../img/search-icon.png') no-repeat
+        display inline-block
+        height 30px
+        padding 0
+        text-indent -3000px
+        width 30px
+
+    input
+        border solid 1px black
+        border-radius 5px
+        display inline-block
+        height 20px
+        margin 0
+        padding 4px
+        &:focus
+            border solid 1px #ccc    
+
+.skip-nav
+    visually-hidden()
+
+.thumb
+    offset = 1%
+    margin-bottom 1em
+    position relative
+
+    a
+        clearfix()
+        display block
+        text-decoration none
+        &:hover
+            cursor pointer
+            opacity 0.8
+            img
+                margin-left offset
+            span.details
+                margin-left 1%
+
+    img
+        border solid 1px #333
+        float left
+        width 20%
+
+    span
+        word-wrap break-word
+        display block
+        &.details
+            display inline-block
+            margin-left 2%
+            width 75%
+
+
+.visually-hidden
+    visually-hidden()
+
+#content
+    position relative
+    margin 0 side-gutter
+    z-index 1
+
+#main
+    position relative
+    width 72%
+#sidebar
+    position absolute
+    top 1em
+    right 0
+    width 25%
+
+#featured-products
+    position relative
+    a
+        display block
+        height auto
+        width 100%
+
+    hgroup
+        h3
+            min-height 3em
+    h1, h2, h3
+        line-height 1
+    img
+        border solid 1px #ccc
+
+    figure
+        color #444
+        display inline-block
+        float left
+        margin 0 1%
+        padding 0
+        position relative
+        text-align center
+        max-width 31%
+
+        a
+            color #444
+        figcaption
+            display inline-block
+
+    .rating
+        position relative
+        text-align center
+        a
+            background url('../img/star-ratings.png') left top no-repeat
+            display inline-block
+            height 13px
+            margin 0.5em 0
+            text-indent -3000px
+            text-decoration none
+            width 65px
+        a.stars-10
+            background-position -14px 0
+        a.stars-15
+            background-position -40px -20px
+        a.stars-20
+            background-position -40px 0
+        a.stars-25
+            background-position -27px -20px
+        a.stars-30
+            background-position -27px 0
+        a.stars-35
+            background-position -40px 0
+        a.stars-45
+            background-position -1px -20px
+
+
+        
+#site-header
+    margin 0 side-gutter
+    position relative
+    z-index 10
+    a
+        display inline-block
+    form
+        margin-top 1em
+        position absolute
+        top 0
+        right 0
+
+    h1
+        font-size 3em
+
+        
+    nav
+        clearfix()
+        background linear-gradient(lighten(dk-blue,15%), lighten(dk-blue, 25%), dk-blue)
+        border solid 1px #ccc
+        border-radius 5px
+        ul
+            display block
+            list-style-type none
+            margin 0
+            padding 0
+            li
+                float left
+                height 100%
+                line-height 2.6em
+                position relative
+                width 10%
+                z-index 10
+                a
+                    border-right solid 1px dk-blue
+                    border-radius 5px
+                    color white
+                    display block
+                    height 100%
+                    text-align center
+                    width 100%
+                &:hover
+                    a
+                        background dk-blue
+                    .sub-nav
+                        left 0
+                        margin-left 0%
+
+
+                .sub-nav
+                    background white
+                    border solid 1px black
+                    border-radius 0 0 5px 5px
+                    font-size 0.75em
+                    left -999em
+                    margin-left 0%
+                    padding 0
+                    position absolute
+                    width 200%
+                    z-index 10
+                    li
+                        background white
+                        float none
+                        position relative
+                        width 100%
+                        a
+                            background none
+                            border none
+                            border-radius 0px
+                            color black
+                            padding 0 0.5em
+                            text-align left
+                            width auto
+                            &:hover
+                                background-color #ccc
+                                text-decoration none
+
+

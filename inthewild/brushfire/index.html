@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie lt-ie10 lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie lt-ie10 lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie lt-ie10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js ie" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>My Store</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="/app/css/normalize.css">
+        <link rel="stylesheet" href="/app/css/site.css">
+        <link rel="stylesheet" href="/app/css/ie.css">
+
+        <script src="/app/js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="container">
+            <header id="site-header">
+                <h1>Example Store</h1>
+                <form class='search' action='/search'>
+                    <label for="search">Search</label>
+                    <input type='text' name='q' id='search' placeholder='Search...'/>
+                    <button type='submit' name='search'>search</button>
+                </form>
+                <nav>
+                    <a class='skip-nav' rel='skip' href='#content' title='Skip Navigation'>Skip Navigation</a>
+                    <ul>                    
+                        <li><a href='/store' title='Purchase Products'>Store</a></li>
+                        <li><a href='/mac' title='Spend lots on a computer!'>Mac</a></li>
+                        <li>
+                            <a href='/ipod' title='Browse Phones'>iPhone</a>
+                            <!--TODO IE7 hover bug fix-->
+                            <ul class="sub-nav">
+                                <li><a href="#">iPhone Nano</a></li>
+                                <li><a href="#">iPhone Memo</a></li>
+                                <li><a href="#">Really long ipod name</a></li>
+                                <li><a href="#">Yet Another iSomething</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href='/ipod' title='Browse Music devices'>iPod</a>
+                            <!--TODO IE7 hover bug fix-->
+                            <ul class="sub-nav">
+                                <li><a href="#">iPod Nano</a></li>
+                                <li><a href="#">iPod Memo</a></li>
+                                <li><a href="#">Really long ipod name</a></li>
+                                <li><a href="#">Yet Another iSomething</a></li>
+                            </ul>
+                        </li>
+                        <li><a href='/ipad' title='Browse iPads'>iPad</a></li>
+                        <li><a href='/itunes' title='Browse your favorite music, videos and more'>iTunes</a></li>
+                        <li><a href='/support' title='Get help for your Apple product'>Support</a></li>
+                    </ul>
+                </nav>
+
+            </header>
+        
+
+            <div id="content">
+                <section id="main">
+                    <article class="hero">
+                        <header>
+                            <h1>Featured Product</h1>
+                        </header>
+                        <figure>
+                            <img src='/app/img/iPod-Nano.jpg' alt='iPod Nano' />
+                            <figcaption>
+                                <p class="ellipsis description">Etiam laoreet urna ut nisl. Yippiyo quis arcu. Maecenizzle pulvinar, ipsum shizzle my nizzle crocodizzle malesuada away, nulla crackalackin da bomb yo, izzle luctizzle metus nulla izzle da bomb. Vivamizzle ullamcorpizzle, izzle dawg sure, nibh nunc ultricizzle turpizzle, izzle luctus bow wow wow elit izzle dolizzle. Maurizzle mammasay mammasa mamma oo sa, orci dope volutpizzle consectetizzle, sizzle pizzle luctizzle pizzle, at phat enim uhuh ... yih! izzle boofron. Nullizzle a dope yo orci daahng dawg viverra. Bow wow wow nizzle bizzle. Curabitizzle non daahng dawg vel pede sodalizzle facilisizzle. Maecenas sapien yo mamma, iaculizzle shut the shizzle up, molestie sed, egestas stuff, sure. Izzle vitae rizzle quizzle nibh bibendum shizzle my nizzle crocodizzle. Nam pulvinar consectetizzle velit. Aliquizzle shut the shizzle up volutpizzle. Stuff izzle leo izzle get down get down pretizzle faucibus. Cras nec lacizzle sure dui condimentum fizzle.</p>
+                                <p class='currency'>$149.00</p>
+                                <form action="/cart" method="POST">
+                                    <button type="submit" class="btn" >Add to Cart</button>
+                                </form>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article id="featured-products">
+                        <header>
+                            <h1>Featured Products</h1>
+                        </header>
+                        <figure>                                
+                            <a href="#" title="Details">
+                                <img src='/app/img/MacBook-Pro.jpg' alt='MacBook Pro'/>
+                            </a>
+                            <figcaption>
+                                <hgroup>
+                                    <h3><a href="#" title="Details">MacBook Pro</a></h3>
+                                    <h4 class="currency">$1,999.00</h4>
+                                </hgroup>
+                                <div class="rating">
+                                    <a class="stars-45" href='#' title="Read Reviews">4.5 of 5 stars</a>
+                                </div>
+                                <form action="/cart" method="POST">
+                                    <button type="submit" onclick="alert('Added To Cart!'); return false;">Add To Cart</button>
+                                </form>
+                            </figcaption>
+
+                        </figure>
+                        <figure>                                
+                            <a href="#" title="Details">
+                                <img src='/app/img/Crumpler-Considerable-Embarrassment-Bag.jpg' alt='Crumpler Considerable Embarrassment Bag'/>
+                            </a>
+                            <figcaption>
+                                <hgroup>
+                                    <h3><a href="#" title="Details">Crumpler Considerable Embarrassment Bag</a></h3>
+                                    <h4 class="currency">$1,999.00</h4>
+                                </hgroup>
+                                <div class="rating">
+                                    <a class="stars-30" href='#' title="Read Reviews">3.0 of 5 stars</a>
+                                </div>
+                                <form action="/cart" method="POST">
+                                    <button type="submit" onclick="alert('Added To Cart!'); return false;">Add To Cart</button>
+                                </form>
+                            </figcaption>
+
+                        </figure>
+                        <figure>                                
+                            <a href="#" title="Details">
+                                <img src='/app/img/iPod-Nano.jpg' alt='iPod Nano'/>
+                            </a>
+                            <figcaption>
+                                <hgroup>
+                                    <h3><a href="#" title="Details">iPod Nano</a></h3>
+                                    <h4 class="currency">$1,999.00</h4>
+                                </hgroup>
+                                <div class="rating">
+                                    <a class="stars-15" href='#' title="Read Reviews">4.5 of 5 stars</a>
+                                </div>
+                                <form action="/cart" method="POST">
+                                    <button type="submit" onclick="alert('Added To Cart!'); return false;">Add To Cart</button>
+                                </form>
+                            </figcaption>
+
+                        </figure>
+                    </article>
+                <!--end #main-->
+                </section>
+
+                <section id="sidebar">
+                    <aside>
+                        <header>
+                            <h3>Categories</h3>
+                        </header>
+                        <ul class="chevron">
+                            <li><a href="#" title="iPhone">iPhone</a></li>
+                            <li><a href="#" title="iPhone 3G">iPhone 3G</a></li>
+                            <li><a href="#" title="iPhone 3GS">iPhone 3GS</a></li>
+                            <li><a href="#" title="iPhone 4">iPhone 4</a></li>
+                        </ul>
+                    </aside>
+                    <aside>
+                        <header>
+                            <h3>Recent Products</h3>
+                        </header>
+                        <div class="thumb">
+                            <a href="#" rel="shop" title="MacBook Pro">
+                                <img src="/app/img/MacBook-Pro.jpg" alt="MacBook Pro"/>
+                                <span class="details">
+                                    <span>MacBook Pro</span>
+                                    <span class="currency">$1,999.00</span>
+                                </span>
+                            </a>
+
+                        </div>
+                        <div class="thumb">
+                            <a href="#" rel="shop" title="iPod Nano">
+                                <img src="/app/img/iPod-Nano.jpg" alt="iPod Nano"/>
+                                <span class="details">
+                                    <span>iPod Nano</span>
+                                    <span class="currency">$149.00</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="thumb">
+                            <a href="#" rel="shop" title="Crumpler">
+                                <img src="/app/img/Crumpler-Considerable-Embarrassment-Bag.jpg" alt="Crumpler"/>
+                                <span class="details">
+                                    <span>Crumpler Considerable Embarrassment Bag</span>
+                                    <span class="currency">$89.95</span>
+                                </span>
+                            </a>
+                        </div>
+                        
+                    </aside>
+                <!--end sidebar-->
+                </section>
+            <!--end content-->
+            </div>
+        <!--end container-->
+        </div>
+    </body>
+</html>

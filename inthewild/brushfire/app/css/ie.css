@@ -1,0 +1,23 @@
+nav {
+  background: #367ca0;
+}
+button {
+  font-size: 1.2em;
+  padding: 0.25em 1em;
+}
+.lt-ie10 .search label {
+  position: relative;
+  display: inline-block;
+  left: auto;
+}
+.lt-ie10 #site-header nav {
+  background: #367ca0;
+}
+.lt-ie10 #site-header nav ul li a {
+  border-right: solid 1px #fff;
+  border-radius: 0;
+  width: 98%;
+}
+.lt-ie10 #site-header nav ul li a:hover {
+  border-right: solid 1px #fff;
+}

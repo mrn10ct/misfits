@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>casing</title>
+
+        <script src="/app/js/vendor/modernizr-2.6.2.min.js"></script>
+        <style>
+            body {
+                background-color: #ccc;
+                font-size: 2em; 
+                font-family: sans-serif;
+            }
+
+            label, button {
+                margin: 1em 0;
+            }
+            input {
+                display: block;
+                font-size: 1em;
+                width: 100%;
+            }
+            #result1 {
+                background-color: #ff0;
+            }
+        </style>
+        <script>
+            var handle= function() {
+                var inputVal = document.getElementById('in1');
+                var blackInput = document.getElementById('black');
+                return titlecase(inputVal.value, blackInput.value);
+            };
+
+            var titlecase = function(inputVal, blackInput) {
+                try {
+                    var cap = function(str) {
+                        return str.charAt(0).toUpperCase() + str.slice(1);
+                    };
+                    
+                    var publish = function(result) {
+                        result = result || 'N/A';
+                        var resDiv = document.getElementById('result1');
+                        resDiv.value = result;
+                        return false;
+                    };
+
+                    var black = blackInput.split(/,/g);
+                    for(var i = 0; i< black.length; i++) {
+                        black[i] = black[i].toLowerCase().replace(/\s/g,'');
+                    }
+                    var val = cap(inputVal.toLowerCase());
+                    var arr = val.split(' ');
+
+                    if(!arr.length) {
+                        return publish('N/A');
+                    }
+
+                    //only touch after first word
+                    for(var i = 1; i<arr.length; i++) {
+                        if(black.indexOf(arr[i]) < 0) {
+                            arr[i] = cap(arr[i]);
+                        }
+                    }
+                    publish(arr.join(' '));
+                    return false;
+                } catch (err) {
+                    alert('error: ' + err);
+                }
+            };
+        </script>
+    </head>
+    <body>
+        <form onSubmit="javascript:return handle();">
+            <fieldset>
+                <legend>casing example</legend>
+                <label>input
+                    <input id='in1' type='text' name='in' required='required' />
+                </label>
+                <label>force lower case (separated by commas)
+                    <input id='black' type='text'/>
+                </label>
+                <label>result
+                    <input type='text' id='result1' readonly tabindex='-1' />
+                </label>
+                    
+                <button type='submit'>titlecase</button>
+                <button type='reset'>reset</button>
+            </fieldset>
+        </form>
+    </body>
+</html>
+
