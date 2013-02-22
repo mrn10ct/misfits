@@ -1,0 +1,14 @@
+Instructions 
+
+The file signup.html contains some HTML / JS for a newsletter signup page. The page contains a form with 3 inputs and a submit button. The HTML has been designed to be localized into multiple languages. When the page has loaded, the function translateForm will be called. Update the translateForm function to do the following:
+
+  1. Using the formDictionary object, update the displayed text for each label on the page, and the submit button.
+  2. After all elements have been updated, create an alert window after a 1 second delay. The alert window should say 'Form translation complete.'
+  3. Style the page with CSS to be similar to the attached solution.png. Additional info: 
+    a. The background color of the page is #d2e2fd.
+    b. The form is 300px wide, 200px from the top of the page, and centered horizontally.
+    c. The background of the form is white with an opacity of 80%.
+    d. Each label 100px wide.
+    e. The border is 2px wide, color #468bfe, and has a radius of 4px.
+  
+Submit a single HTML file, focusing on code readibility. You do not have to optimize for performance. This is just a basic test with no tricks. Using jQuery is encouraged, but not required. If you have any questions or have made any assumptions while working on this, email them with your solution or include them as comments somewhere in the HTML.
